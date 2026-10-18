@@ -31,13 +31,15 @@ def build_ml_dataset():
     )
 
     columns = [
-        "Date",
-        "Ticker",
-        "Daily_Return",
-        "Momentum_5d",
-        "Volatility_20d",
-        "MA_Ratio_20d",
-        "Target"
+    "Date",
+    "Ticker",
+    "Daily_Return",
+    "Momentum_5d",
+    "Volatility_20d",
+    "MA_Ratio_20d",
+    "Future_Return_5d",
+    "Benchmark_Future_Return_5d",
+    "Target"
     ]
 
     combined_data = combined_data[columns]
@@ -51,7 +53,7 @@ def build_ml_dataset():
     "data/ml_dataset.csv",
     index=False
     )
-    
+
     return combined_data
 
 
